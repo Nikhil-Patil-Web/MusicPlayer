@@ -4,6 +4,7 @@ import { HiHome } from 'react-icons/hi'
 import { BiSearch } from 'react-icons/bi'
 import { useRouter } from 'next/navigation'
 import { twMerge } from 'tailwind-merge'
+import Button from '@/components/Button'
 
 interface HeaderProps {
   children: React.ReactNode
@@ -45,7 +46,25 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
             <BiSearch className='text-black' size={20}></BiSearch>
           </button>
         </div>
+        <div className='flex justify-between items-center gap-x-4'>
+          <>
+            <div>
+              <Button
+                onClick={() => {}}
+                className='bg-transparent text-neutral-300 font-medium'
+              >
+                Sign In
+              </Button>
+            </div>
+            <div>
+              <Button onClick={() => {}} className='bg-white px-6 py-2'>
+                Log In
+              </Button>
+            </div>
+          </>
+        </div>
       </div>
+      {children}
     </div>
   )
 }
