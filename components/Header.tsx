@@ -14,7 +14,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ children, className }) => {
   const router = useRouter()
   const handleLogout = () => {}
-
+  console.log(`Printing: ${process.env.NEXT_PUBLIC_SUPABASE_URL}`)
   return (
     <div
       className={twMerge(

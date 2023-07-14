@@ -1,6 +1,7 @@
 import './globals.css'
 import { Figtree } from 'next/font/google'
 import Sidebar from '@/components/Sidebar'
+require('dotenv').config()
 import SupabaseProvider from '@/providers/SupabaseProvider'
 
 const font = Figtree({ subsets: ['latin'] })
